@@ -111,14 +111,16 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .brand-logo {
-  height: 40px;
+  display: block;
+  height: 46px;
   width: auto;
+  margin: 0 auto;
   filter: invert(1);
   opacity: 0.97;
 }
 
 @media (min-width: 640px) {
-  .brand-logo { height: 48px; }
+  .brand-logo { height: 56px; }
 }
 
 .site-header .eyebrow {
