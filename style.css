@@ -203,7 +203,7 @@ ul { list-style: none; margin: 0; padding: 0; }
    Section scaffolding
    ========================================================================== */
 
-main { padding-bottom: var(--sp-9); }
+main { padding-bottom: var(--sp-6); }
 
 .menu-section {
   padding-top: var(--sp-8);
@@ -548,6 +548,15 @@ footer .foot-sub {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-faint);
+}
+
+.foot-thanks {
+  margin-top: 16px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
 }
 
 .foot-contact {
