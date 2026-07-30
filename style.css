@@ -110,6 +110,17 @@ ul { list-style: none; margin: 0; padding: 0; }
   text-align: center;
 }
 
+.brand-logo {
+  height: 40px;
+  width: auto;
+  filter: invert(1);
+  opacity: 0.97;
+}
+
+@media (min-width: 640px) {
+  .brand-logo { height: 48px; }
+}
+
 .site-header .eyebrow {
   display: block;
   font-size: 0.72rem;
@@ -298,7 +309,7 @@ main { padding-bottom: var(--sp-9); }
     column-gap: var(--sp-6);
     border-top: none;
   }
-  .row-list--cols-2 .row-item:nth-child(-n+2) { border-top: 1px solid var(--line); }
+  .row-list--cols-2 li:nth-child(-n+2) .row-item { border-top: 1px solid var(--line); }
 }
 
 /* ==========================================================================
@@ -510,7 +521,7 @@ main { padding-bottom: var(--sp-9); }
     column-gap: var(--sp-6);
     border-top: none;
   }
-  .tier-list--cols-2 .tier-row:nth-child(-n+2) { border-top: 1px solid var(--line); }
+  .tier-list--cols-2 li:nth-child(-n+2) .tier-row { border-top: 1px solid var(--line); }
 }
 
 /* ==========================================================================
@@ -535,4 +546,126 @@ footer .foot-sub {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-faint);
+}
+
+/* ==========================================================================
+   Item button — every menu item is tappable to open the detail modal.
+   Only chrome the browser adds to <button> is reset here; layout
+   (padding, grid, borders) stays owned by the component classes
+   (.row-item / .tile / .feature / .tier-row) so cascade order never
+   matters between this rule and those.
+   ========================================================================== */
+
+.item-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 150ms var(--ease), background-color 150ms var(--ease);
+}
+
+.item-btn:active { transform: scale(0.99); }
+
+.row-item.item-btn:hover,
+.tier-row.item-btn:hover {
+  background-color: var(--paper-tint);
+}
+
+/* ==========================================================================
+   Detail modal
+   ========================================================================== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(36, 24, 17, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms var(--ease);
+}
+
+.modal-backdrop[hidden] { display: none; }
+
+.modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: relative;
+  background: var(--paper);
+  width: 100%;
+  max-width: 480px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  transform: translateY(10px) scale(0.97);
+  transition: transform 280ms var(--ease);
+}
+
+.modal-backdrop.is-open .modal { transform: translateY(0) scale(1); }
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(250, 246, 238, 0.92);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.modal-img {
+  aspect-ratio: 4 / 3;
+  background: var(--paper-tint);
+}
+
+.modal-img[hidden] { display: none; }
+
+.modal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-body { padding: 22px 24px 28px; }
+
+.modal-body .item-name {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.modal-body .item-desc {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.modal-body .item-price {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--clay-deep);
+  font-size: 1.2rem;
 }
