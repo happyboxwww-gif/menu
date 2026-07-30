@@ -2,506 +2,497 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Happy Box Coffee | Menu</title>
-<meta name="description" content="Happy Box Coffee menu — coffee, matcha, acai, sandwiches, cheesecakes and more.">
+<meta name="description" content="Happy Box Coffee menu — espresso, signature drinks, matcha, açaí, sandwiches, Nani's Cheesecake and more.">
+<meta name="theme-color" content="#241811">
+
+<meta property="og:title" content="Happy Box Coffee | Menu">
+<meta property="og:description" content="Espresso, signature drinks, matcha, açaí, sandwiches, Nani's Cheesecake and more.">
+<meta property="og:image" content="images/hb-frappe.jpg">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-  <h1>Happy Box Coffee</h1>
-  <p>Menu</p>
+<header class="site-header">
+  <span class="eyebrow">Est. 2017</span>
+  <h1>Happy Box</h1>
+  <hr class="rule">
+  <p class="tagline">Coffee · Matcha · Açaí · Cheesecake</p>
 </header>
 
-<nav class="jump-nav">
-  <a href="#coffee-plus">Coffee +</a>
-  <a href="#signature">Signature Drinks</a>
-  <a href="#matcha">Matcha</a>
-  <a href="#acai">Acai</a>
-  <a href="#sandwiches">Sandwiches</a>
-  <a href="#croissants">Croissants</a>
-  <a href="#cheesecake">Nani's Cheesecake</a>
-  <a href="#desserts">Desserts</a>
-  <a href="#addons">Add-ons</a>
+<nav class="category-nav" id="categoryNav" aria-label="Menu categories">
+  <div class="wrap">
+    <a class="nav-link" href="#coffee-plus">Coffee +</a>
+    <a class="nav-link" href="#signature">Signature</a>
+    <a class="nav-link" href="#matcha">Matcha</a>
+    <a class="nav-link" href="#acai">Açaí</a>
+    <a class="nav-link" href="#sandwiches">Sandwiches</a>
+    <a class="nav-link" href="#croissants">Croissants</a>
+    <a class="nav-link" href="#cheesecake">Cheesecake</a>
+    <a class="nav-link" href="#desserts">Desserts</a>
+    <a class="nav-link" href="#addons">Add-ons</a>
+  </div>
 </nav>
 
 <main>
+<div class="wrap">
 
-<section class="category" id="coffee-plus">
-  <h2>Coffee +</h2>
-  <div class="grid">
+  <!-- 01 — COFFEE + -->
+  <section class="menu-section" id="coffee-plus">
+    <div class="section-head reveal">
+      <span class="eyebrow">01 — Coffee +</span>
+      <h2>Coffee +</h2>
+      <p>Espresso-based classics, brewed to order.</p>
+    </div>
 
-    <article class="card">
-      <img class="card-img" src="images/espresso.jpg" alt="Espresso">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Espresso</h3><span class="price">AED 22.00</span></div>
-        <p class="desc">Rich, concentrated shot of premium coffee.</p>
+    <ul class="row-list reveal">
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/espresso.jpg" alt="Espresso" loading="eager" decoding="async"></div>
+        <div class="row-text"><h3>Espresso</h3><p>Rich, concentrated shot of premium coffee.</p></div>
+        <span class="row-price">AED 22</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/americano.jpg" alt="Americano" loading="eager" decoding="async"></div>
+        <div class="row-text"><h3>Americano</h3><p>Espresso topped with hot water for a smooth finish.</p></div>
+        <span class="row-price">AED 22</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/flatwhite.jpg" alt="Flatwhite" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Flatwhite</h3><p>Velvety steamed milk with a double espresso.</p></div>
+        <span class="row-price">AED 24</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/cafe-latte.jpg" alt="Café Latte" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Café Latte</h3><p>Espresso with creamy steamed milk.</p></div>
+        <span class="row-price">AED 21</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/cappuccino.jpg" alt="Cappuccino" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Cappuccino</h3><p>Espresso with steamed milk and thick foam.</p></div>
+        <span class="row-price">AED 24</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/cortado.jpg" alt="Cortado" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Cortado</h3><p>Equal parts espresso and steamed milk.</p></div>
+        <span class="row-price">AED 22</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/piccolo.jpg" alt="Piccolo" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Piccolo</h3><p>Small latte with a bold espresso flavour.</p></div>
+        <span class="row-price">AED 22</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/espresso-machiato.jpg" alt="Espresso Machiato" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Espresso Machiato</h3><p>Espresso marked with a touch of milk foam.</p></div>
+        <span class="row-price">AED 22</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/v60.jpg" alt="V60" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>V60</h3><p>Hand-brewed filter coffee with clean, delicate notes.</p></div>
+        <span class="row-price">AED 35</span>
+      </li>
+      <li class="row-item no-photo">
+        <div class="row-text"><h3>Aeropress</h3><p>Espresso poured over creamy vanilla ice cream.</p></div>
+        <span class="row-price">AED 35</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 02 — SIGNATURE DRINKS -->
+  <section class="menu-section" id="signature">
+    <div class="section-head reveal">
+      <span class="eyebrow">02 — Signature Drinks</span>
+      <h2>Signature Drinks</h2>
+      <p>Happy Box originals you won't find anywhere else.</p>
+    </div>
+
+    <article class="feature reveal">
+      <div class="feature-img"><img src="images/hb-frappe.jpg" alt="HB Frappe" loading="lazy" decoding="async"></div>
+      <div class="feature-body">
+        <span class="kicker">The Signature</span>
+        <h3>HB Frappe</h3>
+        <p>Signature iced blended coffee, smooth and refreshing.</p>
+        <span class="row-price">AED 45</span>
       </div>
     </article>
 
-    <article class="card">
-      <img class="card-img" src="images/americano.jpg" alt="Americano">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Americano</h3><span class="price">AED 22.00</span></div>
-        <p class="desc">Espresso topped with hot water for a smooth finish.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/flatwhite.jpg" alt="Flatwhite">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Flatwhite</h3><span class="price">AED 24.00</span></div>
-        <p class="desc">Velvety steamed milk with a double espresso.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/cafe-latte.jpg" alt="Café Latte">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Café Latte</h3><span class="price">AED 21.00</span></div>
-        <p class="desc">Espresso with creamy steamed milk.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/cappuccino.jpg" alt="Cappuccino">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Cappuccino</h3><span class="price">AED 24.00</span></div>
-        <p class="desc">Espresso with steamed milk and thick foam.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/cortado.jpg" alt="Cortado">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Cortado</h3><span class="price">AED 22.00</span></div>
-        <p class="desc">Equal parts espresso and steamed milk.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/piccolo.jpg" alt="Piccolo">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Piccolo</h3><span class="price">AED 22.00</span></div>
-        <p class="desc">Small latte with a bold espresso flavour.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/espresso-machiato.jpg" alt="Espresso Machiato">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Espresso Machiato</h3><span class="price">AED 22.00</span></div>
-        <p class="desc">Espresso marked with a touch of milk foam.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/v60.jpg" alt="V60">
-      <div class="card-body">
-        <div class="card-title-row"><h3>V60</h3><span class="price">AED 35.00</span></div>
-        <p class="desc">Hand-brewed filter coffee with clean, delicate notes.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Aeropress</h3><span class="price">AED 35.00</span></div>
-        <p class="desc">Espresso poured over creamy vanilla ice cream.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="category" id="signature">
-  <h2>Signature Drinks</h2>
-  <div class="grid">
-
-    <article class="card">
-      <img class="card-img" src="images/spanish-latte.jpg" alt="Spanish Latte">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Spanish Latte</h3><span class="price">AED 30.00</span></div>
-        <p class="desc">Sweet, creamy latte made with white chocolate.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Salted Caramel</h3><span class="price">AED 30.00</span></div>
-        <p class="desc">Espresso blended with rich salted caramel.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/hb-frappe.jpg" alt="HB Frappe">
-      <div class="card-body">
-        <div class="card-title-row"><h3>HB Frappe</h3><span class="price">AED 45.00</span></div>
-        <p class="desc">Signature iced blended coffee, smooth and refreshing.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/mocha-latte.jpg" alt="Mocha Latte">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Mocha Latte</h3><span class="price">AED 30.00</span></div>
-        <p class="desc">Espresso with chocolate and steamed milk.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/hot-iced-chocolate.jpg" alt="Hot / Iced Chocolate">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Hot / Iced Chocolate</h3><span class="price">AED 30.00</span></div>
-        <p class="desc">Rich premium chocolate served hot or cold.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="category" id="matcha">
-  <h2>Matcha Drinks</h2>
-  <div class="grid">
-
-    <article class="card">
-      <img class="card-img" src="images/classic-matcha.jpg" alt="Classic Matcha">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Classic Matcha</h3><span class="price">AED 35.00</span></div>
-        <p class="desc">Premium Japanese matcha with milk.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/cloud-matcha.jpg" alt="Cloud Matcha">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Cloud Matcha</h3><span class="price">AED 40.00</span></div>
-        <p class="desc">Creamy matcha topped with a light foam.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Salted Caramel Matcha</h3><span class="price">AED 35.00</span></div>
-        <p class="desc">Matcha with sweet salted caramel.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry Matcha</h3><span class="price">AED 35.00</span></div>
-        <p class="desc">Matcha layered with fresh strawberry flavour.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="category" id="acai">
-  <h2>Acai</h2>
-  <div class="grid">
-
-    <article class="card">
-      <img class="card-img" src="images/acai-smoothie.jpg" alt="Acai Smoothie">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Acai Smoothie</h3><span class="price">AED 40.00</span></div>
-        <p class="desc">Refreshing açaí blended with mixed fruits.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Acai with Protein Smoothie</h3><span class="price">AED 47.00</span></div>
-        <p class="desc">Açaí smoothie boosted with protein.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/acai-bowl.jpg" alt="Acai Bowl">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Acai Bowl</h3><span class="price">AED 40.00</span></div>
-        <p class="desc">Açaí topped with fresh fruits and crunchy granola.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="category" id="sandwiches">
-  <h2>Sandwiches</h2>
-  <div class="grid">
-
-    <article class="card">
-      <img class="card-img" src="images/turkey-cranberry.jpg" alt="Turkey & Cheese w/ Cranberry Sauce">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Turkey &amp; Cheese w/ Cranberry Sauce</h3><span class="price">AED 40.00</span></div>
-        <p class="desc">Turkey, cheese, and sweet cranberry sauce.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/roasted-beef.jpg" alt="Roasted Beef">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Roasted Beef</h3><span class="price">AED 40.00</span></div>
-        <p class="desc">Slow-roasted beef with fresh greens.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/roasted-chicken.jpg" alt="Roasted Chicken">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Roasted Chicken</h3><span class="price">AED 40.00</span></div>
-        <p class="desc">Tender roasted chicken with fresh vegetables.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/tuna-avocado.jpg" alt="Tuna w/ Avocado">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Tuna w/ Avocado</h3><span class="price">AED 40.00</span></div>
-        <p class="desc">Creamy tuna paired with fresh avocado.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="category" id="croissants">
-  <h2>Croissants</h2>
-  <div class="grid">
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Plain</h3><span class="price">AED 15.00</span></div>
-        <p class="desc">Buttery, flaky French pastry baked fresh daily.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Chocolate</h3><span class="price">AED 18.00</span></div>
-        <p class="desc">Buttery croissant filled with rich melted chocolate.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Cheese</h3><span class="price">AED 18.00</span></div>
-        <p class="desc">Flaky butter croissant filled with creamy, savory cheese.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="category" id="cheesecake">
-  <h2>Nani's Cheesecake</h2>
-  <div class="grid">
-
-    <article class="card">
-      <img class="card-img" src="images/bueno-buenos-aires.jpg" alt="Bueno - Buenos Aires">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Bueno - Buenos Aires</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in smooth milk chocolate, topped with assorted chocolate balls and rich Kinder Bueno pieces for the perfect indulgent bite.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/bueno-white-barcelona.jpg" alt="Bueno White - Barcelona">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Bueno White - Barcelona</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in creamy Kinder Bueno spread, topped with assorted chocolate balls and white Kinder Bueno pieces for a rich, indulgent finish.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/kinder-choco-balls-moscow.jpg" alt="Kinder Choco Balls - Moscow">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Kinder Choco Balls - Moscow</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in creamy milk chocolate, topped with colorful chocolate balls and Kinder pieces for a rich, indulgent finish.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/maxi-king-toffifee-london.jpg" alt="Maxi King Toffifee - London">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Maxi King Toffifee - London</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in creamy milk chocolate, topped with Maxi King, Toffifee chocolates, and drizzled with rich caramel sauce for a truly indulgent experience.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/oreo-dubai.jpg" alt="Oreo - Dubai">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Oreo - Dubai</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in creamy milk chocolate and topped with crunchy Oreo pieces for a rich and satisfying treat.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/raffaello-cologne.jpg" alt="Raffaello - Cologne">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Raffaello - Cologne</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in smooth white chocolate, topped with Raffaello chocolates and finished with a sprinkle of coconut for a light, luxurious bite.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/strawberry-pistachio.jpg" alt="Strawberry Pistachio">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry Pistachio</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in smooth white chocolate, topped with fresh strawberries and blueberries, and drizzled with rich pistachio sauce for a fruity, nutty twist.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/lotus-las-vegas.jpg" alt="Lotus - Las Vegas">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Lotus - Las Vegas</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated and topped with rich Lotus cream and crunchy Biscoff biscuits for a caramelized, spiced indulgence.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/rocher-ferrero-paris.jpg" alt="Rocher Ferrero - Paris">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Rocher Ferrero - Paris</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in creamy milk chocolate, topped with Ferrero Rocher and crushed nuts for a luxurious, crunchy finish.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/strawberry-istanbul.jpg" alt="Strawberry - Istanbul">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry - Istanbul</h3><span class="price">AED 42.00</span></div>
-        <p class="desc">A classic New York-style cheesecake coated in strawberry cream and topped with fresh strawberries for a fruity, refreshing delight.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="category" id="desserts">
-  <h2>Desserts</h2>
-  <div class="grid">
-
-    <article class="card">
-      <img class="card-img" src="images/strawberry-cup.jpg" alt="Strawberry in Cup">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry in Cup</h3><span class="price">AED 35.00</span></div>
-        <p class="desc">Fresh strawberries coated with premium chocolate.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="card-img" src="images/strawberry-piece.jpg" alt="Strawberry Chocolate (1 Pc)">
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry Chocolate (1 Pc)</h3><span class="price">AED 15.00</span></div>
-        <p class="desc">One chocolate-dipped fresh strawberry.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry in Box (5 pcs)</h3><span class="price">AED 79.00</span></div>
-        <p class="desc">Five chocolate-covered strawberries.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry in Box (12 pcs)</h3><span class="price">AED 159.00</span></div>
-        <p class="desc">Twelve chocolate-covered strawberries.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry in Box (20 pcs)</h3><span class="price">AED 249.00</span></div>
-        <p class="desc">Twenty chocolate-covered strawberries.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Strawberry in Box (50 pcs)</h3><span class="price">AED 499.00</span></div>
-        <p class="desc">Fifty chocolate-covered strawberries.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="category" id="addons">
-  <h2>Add-ons</h2>
-  <div class="grid">
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Extra Shot</h3><span class="price">AED 5.00</span></div>
-        <p class="desc">Add an extra espresso shot.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Alternative Milk</h3><span class="price">AED 50.00</span></div>
-        <p class="desc">Oat, Almond &amp; Coconut plant-based.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Fruits</h3><span class="price">AED 5.00</span></div>
-        <p class="desc">Banana, Strawberry, Blueberry, Raspberry.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Extra Peanut Butter</h3><span class="price">AED 5.00</span></div>
-        <p class="desc">Add a spoon of peanut butter.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Extra Protein Powder</h3><span class="price">AED 7.00</span></div>
-        <p class="desc">Boost any drink with protein powder.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-placeholder"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 21h18v-2H2v2zM20 8h-2V5h2v3m0-5H4v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-2h2a2 2 0 0 0 2-2V5c0-1.1-.9-2-2-2z"/></svg></div>
-      <div class="card-body">
-        <div class="card-title-row"><h3>Cranberry Sauce</h3><span class="price">AED 5.00</span></div>
-        <p class="desc">Add sweet cranberry sauce.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
+    <ul class="row-list reveal">
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/spanish-latte.jpg" alt="Spanish Latte" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Spanish Latte</h3><p>Sweet, creamy latte made with white chocolate.</p></div>
+        <span class="row-price">AED 30</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/mocha-latte.jpg" alt="Mocha Latte" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Mocha Latte</h3><p>Espresso with chocolate and steamed milk.</p></div>
+        <span class="row-price">AED 30</span>
+      </li>
+      <li class="row-item">
+        <div class="row-thumb"><img src="images/hot-iced-chocolate.jpg" alt="Hot / Iced Chocolate" loading="lazy" decoding="async"></div>
+        <div class="row-text"><h3>Hot / Iced Chocolate</h3><p>Rich premium chocolate served hot or cold.</p></div>
+        <span class="row-price">AED 30</span>
+      </li>
+      <li class="row-item no-photo">
+        <div class="row-text"><h3>Salted Caramel</h3><p>Espresso blended with rich salted caramel.</p></div>
+        <span class="row-price">AED 30</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 03 — MATCHA -->
+  <section class="menu-section" id="matcha">
+    <div class="section-head reveal">
+      <span class="eyebrow">03 — Matcha Drinks</span>
+      <h2>Matcha Drinks</h2>
+      <p>Stone-ground Japanese matcha, whisked to order.</p>
+    </div>
+
+    <div class="tile-grid reveal">
+      <article class="tile">
+        <div class="tile-img"><img src="images/classic-matcha.jpg" alt="Classic Matcha" loading="lazy" decoding="async"></div>
+        <h3>Classic Matcha</h3>
+        <p class="tile-desc">Premium Japanese matcha with milk.</p>
+        <span class="row-price">AED 35</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/cloud-matcha.jpg" alt="Cloud Matcha" loading="lazy" decoding="async"></div>
+        <h3>Cloud Matcha</h3>
+        <p class="tile-desc">Creamy matcha topped with a light foam.</p>
+        <span class="row-price">AED 40</span>
+      </article>
+    </div>
+
+    <ul class="row-list reveal">
+      <li class="row-item no-photo">
+        <div class="row-text"><h3>Salted Caramel Matcha</h3><p>Matcha with sweet salted caramel.</p></div>
+        <span class="row-price">AED 35</span>
+      </li>
+      <li class="row-item no-photo">
+        <div class="row-text"><h3>Strawberry Matcha</h3><p>Matcha layered with fresh strawberry flavour.</p></div>
+        <span class="row-price">AED 35</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 04 — ACAI -->
+  <section class="menu-section" id="acai">
+    <div class="section-head reveal">
+      <span class="eyebrow">04 — Açaí</span>
+      <h2>Açaí</h2>
+      <p>Blended fresh, topped generously.</p>
+    </div>
+
+    <div class="tile-grid reveal">
+      <article class="tile">
+        <div class="tile-img"><img src="images/acai-smoothie.jpg" alt="Açaí Smoothie" loading="lazy" decoding="async"></div>
+        <h3>Açaí Smoothie</h3>
+        <p class="tile-desc">Refreshing açaí blended with mixed fruits.</p>
+        <span class="row-price">AED 40</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/acai-bowl.jpg" alt="Açaí Bowl" loading="lazy" decoding="async"></div>
+        <h3>Açaí Bowl</h3>
+        <p class="tile-desc">Açaí topped with fresh fruits and crunchy granola.</p>
+        <span class="row-price">AED 40</span>
+      </article>
+    </div>
+
+    <ul class="row-list reveal">
+      <li class="row-item no-photo">
+        <div class="row-text"><h3>Açaí with Protein Smoothie</h3><p>Açaí smoothie boosted with protein.</p></div>
+        <span class="row-price">AED 47</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 05 — SANDWICHES -->
+  <section class="menu-section" id="sandwiches">
+    <div class="section-head reveal">
+      <span class="eyebrow">05 — Sandwiches</span>
+      <h2>Sandwiches</h2>
+      <p>Made fresh on soft daily bread.</p>
+    </div>
+
+    <div class="gallery-scroll reveal">
+      <article class="gallery-item tile">
+        <div class="tile-img"><img src="images/turkey-cranberry.jpg" alt="Turkey & Cheese w/ Cranberry Sauce" loading="lazy" decoding="async"></div>
+        <h3>Turkey &amp; Cheese w/ Cranberry Sauce</h3>
+        <p class="tile-desc">Turkey, cheese, and sweet cranberry sauce.</p>
+        <span class="row-price">AED 40</span>
+      </article>
+      <article class="gallery-item tile">
+        <div class="tile-img"><img src="images/roasted-beef.jpg" alt="Roasted Beef" loading="lazy" decoding="async"></div>
+        <h3>Roasted Beef</h3>
+        <p class="tile-desc">Slow-roasted beef with fresh greens.</p>
+        <span class="row-price">AED 40</span>
+      </article>
+      <article class="gallery-item tile">
+        <div class="tile-img"><img src="images/roasted-chicken.jpg" alt="Roasted Chicken" loading="lazy" decoding="async"></div>
+        <h3>Roasted Chicken</h3>
+        <p class="tile-desc">Tender roasted chicken with fresh vegetables.</p>
+        <span class="row-price">AED 40</span>
+      </article>
+      <article class="gallery-item tile">
+        <div class="tile-img"><img src="images/tuna-avocado.jpg" alt="Tuna w/ Avocado" loading="lazy" decoding="async"></div>
+        <h3>Tuna w/ Avocado</h3>
+        <p class="tile-desc">Creamy tuna paired with fresh avocado.</p>
+        <span class="row-price">AED 40</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- 06 — CROISSANTS -->
+  <section class="menu-section" id="croissants">
+    <div class="section-head reveal">
+      <span class="eyebrow">06 — Croissants</span>
+      <h2>Croissants</h2>
+      <p>Baked in-house, every morning.</p>
+    </div>
+
+    <ul class="row-list row-list--cols-2 reveal">
+      <li class="row-item no-photo">
+        <div class="row-text"><h3>Plain</h3><p>Buttery, flaky French pastry baked fresh daily.</p></div>
+        <span class="row-price">AED 15</span>
+      </li>
+      <li class="row-item no-photo">
+        <div class="row-text"><h3>Chocolate</h3><p>Buttery croissant filled with rich melted chocolate.</p></div>
+        <span class="row-price">AED 18</span>
+      </li>
+      <li class="row-item no-photo">
+        <div class="row-text"><h3>Cheese</h3><p>Flaky butter croissant filled with creamy, savory cheese.</p></div>
+        <span class="row-price">AED 18</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 07 — NANI'S CHEESECAKE -->
+  <section class="menu-section" id="cheesecake">
+    <div class="section-head reveal">
+      <span class="eyebrow">07 — Nani's Cheesecake</span>
+      <h2>Nani's Cheesecake</h2>
+      <p>Ten flavors, one classic New York base — a world tour in every slice.</p>
+    </div>
+
+    <div class="tile-grid tile-grid--cheesecake reveal">
+      <article class="tile">
+        <div class="tile-img"><img src="images/bueno-buenos-aires.jpg" alt="Bueno - Buenos Aires cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Buenos Aires</span>
+        <h3>Bueno</h3>
+        <p class="tile-desc">Milk chocolate, assorted chocolate balls &amp; Kinder Bueno.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/bueno-white-barcelona.jpg" alt="Bueno White - Barcelona cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Barcelona</span>
+        <h3>Bueno White</h3>
+        <p class="tile-desc">Kinder Bueno spread, chocolate balls &amp; white Bueno pieces.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/kinder-choco-balls-moscow.jpg" alt="Kinder Choco Balls - Moscow cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Moscow</span>
+        <h3>Kinder Choco Balls</h3>
+        <p class="tile-desc">Milk chocolate, colorful chocolate balls &amp; Kinder pieces.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/maxi-king-toffifee-london.jpg" alt="Maxi King Toffifee - London cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">London</span>
+        <h3>Maxi King Toffifee</h3>
+        <p class="tile-desc">Milk chocolate, Maxi King &amp; Toffifee, caramel drizzle.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/oreo-dubai.jpg" alt="Oreo - Dubai cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Dubai</span>
+        <h3>Oreo</h3>
+        <p class="tile-desc">Milk chocolate, topped with crunchy Oreo pieces.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/raffaello-cologne.jpg" alt="Raffaello - Cologne cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Cologne</span>
+        <h3>Raffaello</h3>
+        <p class="tile-desc">White chocolate, Raffaello &amp; a sprinkle of coconut.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/strawberry-pistachio.jpg" alt="Strawberry Pistachio cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Milano</span>
+        <h3>Strawberry Pistachio</h3>
+        <p class="tile-desc">White chocolate, strawberries, blueberries &amp; pistachio sauce.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/lotus-las-vegas.jpg" alt="Lotus - Las Vegas cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Las Vegas</span>
+        <h3>Lotus</h3>
+        <p class="tile-desc">Rich Lotus cream &amp; crunchy Biscoff biscuits.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/rocher-ferrero-paris.jpg" alt="Rocher Ferrero - Paris cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Paris</span>
+        <h3>Rocher Ferrero</h3>
+        <p class="tile-desc">Milk chocolate, Ferrero Rocher &amp; crushed nuts.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/strawberry-istanbul.jpg" alt="Strawberry - Istanbul cheesecake" loading="lazy" decoding="async"></div>
+        <span class="tile-eyebrow">Istanbul</span>
+        <h3>Strawberry</h3>
+        <p class="tile-desc">Strawberry cream, topped with fresh strawberries.</p>
+        <span class="row-price">AED 42</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- 08 — DESSERTS -->
+  <section class="menu-section" id="desserts">
+    <div class="section-head reveal">
+      <span class="eyebrow">08 — Desserts</span>
+      <h2>Desserts</h2>
+      <p>Fresh strawberries, hand-dipped in chocolate.</p>
+    </div>
+
+    <div class="tile-grid reveal">
+      <article class="tile">
+        <div class="tile-img"><img src="images/strawberry-cup.jpg" alt="Strawberry in Cup" loading="lazy" decoding="async"></div>
+        <h3>Strawberry in Cup</h3>
+        <p class="tile-desc">Fresh strawberries coated with premium chocolate.</p>
+        <span class="row-price">AED 35</span>
+      </article>
+      <article class="tile">
+        <div class="tile-img"><img src="images/strawberry-piece.jpg" alt="Strawberry Chocolate (1 Pc)" loading="lazy" decoding="async"></div>
+        <h3>Strawberry Chocolate (1 Pc)</h3>
+        <p class="tile-desc">One chocolate-dipped fresh strawberry.</p>
+        <span class="row-price">AED 15</span>
+      </article>
+    </div>
+
+    <div class="section-head reveal" style="margin-top: var(--sp-6); margin-bottom: var(--sp-4);">
+      <span class="eyebrow">Gift Boxes</span>
+    </div>
+    <ul class="tier-list reveal">
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Strawberry in Box — 5 pcs</span><span class="tier-fill"></span><span class="tier-price">AED 79</span></div>
+        <p class="tier-desc">Five chocolate-covered strawberries.</p>
+      </li>
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Strawberry in Box — 12 pcs</span><span class="tier-fill"></span><span class="tier-price">AED 159</span></div>
+        <p class="tier-desc">Twelve chocolate-covered strawberries.</p>
+      </li>
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Strawberry in Box — 20 pcs</span><span class="tier-fill"></span><span class="tier-price">AED 249</span></div>
+        <p class="tier-desc">Twenty chocolate-covered strawberries.</p>
+      </li>
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Strawberry in Box — 50 pcs</span><span class="tier-fill"></span><span class="tier-price">AED 499</span></div>
+        <p class="tier-desc">Fifty chocolate-covered strawberries.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 09 — ADD-ONS -->
+  <section class="menu-section" id="addons">
+    <div class="section-head reveal">
+      <span class="eyebrow">09 — Add-ons</span>
+      <h2>Add-ons</h2>
+      <p>Customize any drink or bowl.</p>
+    </div>
+
+    <ul class="tier-list tier-list--cols-2 reveal">
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Extra Shot</span><span class="tier-fill"></span><span class="tier-price">AED 5</span></div>
+        <p class="tier-desc">Add an extra espresso shot.</p>
+      </li>
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Alternative Milk</span><span class="tier-fill"></span><span class="tier-price">AED 50</span></div>
+        <p class="tier-desc">Oat, almond &amp; coconut plant-based.</p>
+      </li>
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Fruits</span><span class="tier-fill"></span><span class="tier-price">AED 5</span></div>
+        <p class="tier-desc">Banana, strawberry, blueberry, raspberry.</p>
+      </li>
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Extra Peanut Butter</span><span class="tier-fill"></span><span class="tier-price">AED 5</span></div>
+        <p class="tier-desc">Add a spoon of peanut butter.</p>
+      </li>
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Extra Protein Powder</span><span class="tier-fill"></span><span class="tier-price">AED 7</span></div>
+        <p class="tier-desc">Boost any drink with protein powder.</p>
+      </li>
+      <li class="tier-row">
+        <div class="tier-top"><span class="tier-name">Cranberry Sauce</span><span class="tier-fill"></span><span class="tier-price">AED 5</span></div>
+        <p class="tier-desc">Add sweet cranberry sauce.</p>
+      </li>
+    </ul>
+  </section>
+
+</div>
 </main>
 
-<footer>Happy Box Coffee</footer>
+<footer>
+  <p class="foot-brand">Happy Box</p>
+  <p class="foot-sub">Est. 2017</p>
+</footer>
+
+<script>
+(function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reveal-on-scroll — progressive enhancement only. Elements are fully
+  // visible by default (see CSS); JS opts them into the animated starting
+  // state, so a JS error or slow script never leaves content hidden.
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    var revealEls = document.querySelectorAll('.reveal');
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) {
+      el.classList.add('pre-reveal');
+      revealObserver.observe(el);
+    });
+  }
+
+  // Active category tracking
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+  var sections = navLinks
+    .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+    .filter(Boolean);
+
+  function setActive(id) {
+    navLinks.forEach(function (link) {
+      var isActive = link.getAttribute('href') === '#' + id;
+      link.classList.toggle('is-active', isActive);
+      if (isActive) {
+        link.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+      }
+    });
+  }
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var navHeight = document.getElementById('categoryNav').offsetHeight;
+    var sectionObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { setActive(entry.target.id); }
+      });
+    }, { rootMargin: '-' + (navHeight + 10) + 'px 0px -70% 0px', threshold: 0 });
+    sections.forEach(function (section) { sectionObserver.observe(section); });
+  }
+})();
+</script>
 
 </body>
 </html>

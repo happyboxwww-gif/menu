@@ -1,167 +1,538 @@
+/* ==========================================================================
+   Happy Box — design tokens
+   ========================================================================== */
+
 :root {
-  --cream: #faf3e6;
-  --cream-2: #f3e8d6;
-  --coffee: #3b2a1e;
-  --coffee-2: #5c4433;
-  --gold: #b8863b;
-  --gold-light: #e0b45c;
-  --text: #2b1b12;
-  --muted: #7a6a5a;
-  --card: #ffffff;
-  --radius: 16px;
-  --shadow: 0 6px 20px rgba(59, 42, 30, 0.08);
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --ink: #241811;
+  --ink-soft: #6b5c4d;
+  --ink-faint: #b3a390;
+  --paper: #faf6ee;
+  --paper-tint: #f1e7d3;
+  --line: #e6d9bf;
+  --espresso: #241811;
+  --espresso-soft: #3a2a1c;
+  --clay: #a5652f;
+  --clay-deep: #7e4b22;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  --container: 1120px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Reset & base
+   ========================================================================== */
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.5;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.hero {
-  background: linear-gradient(160deg, var(--coffee) 0%, var(--coffee-2) 100%);
-  color: var(--cream);
-  padding: 56px 20px 40px;
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  margin: 0;
+  color: var(--ink);
+}
+
+p { margin: 0; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+@media (min-width: 640px) {
+  .wrap { padding-inline: 32px; }
+}
+
+@media (min-width: 1024px) {
+  .wrap { padding-inline: 48px; }
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  background: var(--espresso);
+  color: var(--paper-tint);
+  padding: 40px 20px 32px;
   text-align: center;
 }
 
-.hero h1 {
-  margin: 0 0 6px;
-  font-size: 2.2rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-.hero p {
-  margin: 0;
-  color: var(--gold-light);
-  font-size: 1.05rem;
-  letter-spacing: 3px;
+.site-header .eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
+  color: #c99a5b;
+  margin-bottom: 10px;
 }
 
-.jump-nav {
+.site-header h1 {
+  color: #fbf3e4;
+  font-size: clamp(2rem, 6vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.site-header .rule {
+  width: 40px;
+  height: 2px;
+  background: #c99a5b;
+  border: none;
+  margin: 16px auto;
+}
+
+.site-header .tagline {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #cbb89a;
+}
+
+/* ==========================================================================
+   Category nav
+   ========================================================================== */
+
+.category-nav {
   position: sticky;
   top: 0;
-  z-index: 10;
-  background: var(--cream);
-  border-bottom: 1px solid var(--cream-2);
-  padding: 10px 12px;
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  z-index: 20;
+  background: rgba(250, 246, 238, 0.94);
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-bottom: 1px solid var(--line);
 }
 
-.jump-nav a {
+.category-nav .wrap {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-block: 14px;
+}
+
+.category-nav .wrap::-webkit-scrollbar { display: none; }
+
+.nav-link {
   flex: 0 0 auto;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--coffee);
-  text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  border: 1px solid var(--cream-2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 200ms var(--ease), border-color 200ms var(--ease);
+}
+
+.nav-link:hover { color: var(--ink); }
+
+.nav-link.is-active {
+  color: var(--clay-deep);
+  border-color: var(--clay);
+}
+
+/* ==========================================================================
+   Section scaffolding
+   ========================================================================== */
+
+main { padding-bottom: var(--sp-9); }
+
+.menu-section {
+  padding-top: var(--sp-8);
+  scroll-margin-top: 58px;
+}
+
+.section-head {
+  margin-bottom: var(--sp-6);
+  max-width: 640px;
+}
+
+.section-head .eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 8px;
+}
+
+.section-head h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.section-head p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* Base state is fully visible — JS opts elements into the hidden
+   starting state via .pre-reveal so a JS failure never hides content. */
+.reveal.pre-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 500ms var(--ease), transform 500ms var(--ease);
+}
+
+.reveal.pre-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================================
+   Row list (Coffee+, Croissants, Add-ons text tails)
+   ========================================================================== */
+
+.row-list {
+  border-top: 1px solid var(--line);
+}
+
+.row-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row-item.no-photo {
+  grid-template-columns: 1fr auto;
+}
+
+.row-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--paper-tint);
+}
+
+.row-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.row-text h3 {
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.row-text p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.row-price {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--clay-deep);
+  white-space: nowrap;
+  font-size: 0.98rem;
+}
+
+@media (min-width: 768px) {
+  .row-list--cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--sp-6);
+    border-top: none;
+  }
+  .row-list--cols-2 .row-item:nth-child(-n+2) { border-top: 1px solid var(--line); }
+}
+
+/* ==========================================================================
+   Feature (large hero dish)
+   ========================================================================== */
+
+.feature {
+  display: grid;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+}
+
+.feature-img {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--paper-tint);
+}
+
+.feature-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms var(--ease);
+}
+
+.feature:hover .feature-img img { transform: scale(1.03); }
+
+.feature-body .kicker {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 6px;
+}
+
+.feature-body h3 {
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.feature-body p {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  max-width: 46ch;
+  margin-bottom: 12px;
+}
+
+.feature-body .row-price { font-size: 1.15rem; }
+
+@media (min-width: 768px) {
+  .feature {
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: var(--sp-7);
+  }
+  .feature-img { aspect-ratio: 5 / 4; }
+}
+
+/* ==========================================================================
+   Tile grid (Matcha / Acai pairs, Cheesecake, Desserts pair)
+   ========================================================================== */
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+}
+
+@media (min-width: 640px) {
+  .tile-grid--cheesecake { grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
+}
+
+@media (min-width: 1024px) {
+  .tile-grid--cheesecake { grid-template-columns: repeat(4, 1fr); }
+}
+
+.tile-img {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--paper-tint);
+  margin-bottom: 10px;
+}
+
+.tile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms var(--ease);
+}
+
+.tile:hover .tile-img img { transform: scale(1.04); }
+
+.tile-eyebrow {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 3px;
+}
+
+.tile h3 {
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.tile .row-price {
+  font-size: 0.88rem;
+  display: block;
+  margin-top: 3px;
+}
+
+.tile-desc {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   Gallery (horizontal-scroll on mobile, grid on desktop) — Sandwiches
+   ========================================================================== */
+
+.gallery-scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0 -20px;
+  padding: 0 20px 6px;
+}
+
+.gallery-scroll::-webkit-scrollbar { display: none; }
+
+.gallery-item {
+  flex: 0 0 76%;
+  scroll-snap-align: start;
+}
+
+.gallery-item .tile-img { aspect-ratio: 4 / 3; margin-bottom: 12px; }
+
+@media (min-width: 700px) {
+  .gallery-scroll {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+  .gallery-item { flex: unset; }
+}
+
+/* ==========================================================================
+   Tier list (dotted-leader price list) — Desserts boxes, Add-ons
+   ========================================================================== */
+
+.tier-list { border-top: 1px solid var(--line); }
+
+.tier-row {
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tier-top {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.tier-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
   white-space: nowrap;
 }
 
-.jump-nav a:hover { background: var(--gold-light); }
-
-main { max-width: 1100px; margin: 0 auto; padding: 10px 20px 60px; }
-
-.category {
-  padding-top: 28px;
-  scroll-margin-top: 56px;
-}
-
-.category h2 {
-  font-size: 1.5rem;
-  color: var(--coffee);
-  border-bottom: 2px solid var(--gold);
-  display: inline-block;
-  padding-bottom: 6px;
-  margin-bottom: 18px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 18px;
-}
-
-.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-}
-
-.card-img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background: var(--cream-2);
-  display: block;
-}
-
-.card-placeholder {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--cream-2), #e9d9bd);
-  color: var(--gold);
-}
-
-.card-placeholder svg { width: 42px; height: 42px; opacity: 0.6; }
-
-.card-body {
-  padding: 14px 16px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.tier-fill {
   flex: 1;
+  min-width: 16px;
+  border-bottom: 2px dotted var(--ink-faint);
+  margin-bottom: 5px;
 }
 
-.card-title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 10px;
-}
-
-.card-title-row h3 {
-  margin: 0;
-  font-size: 1.05rem;
-  color: var(--text);
-}
-
-.price {
-  color: var(--gold);
-  font-weight: 700;
+.tier-price {
+  font-weight: 600;
+  color: var(--clay-deep);
   white-space: nowrap;
   font-size: 0.95rem;
 }
 
-.desc {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--muted);
+.tier-desc {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
 }
+
+@media (min-width: 768px) {
+  .tier-list--cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--sp-6);
+    border-top: none;
+  }
+  .tier-list--cols-2 .tier-row:nth-child(-n+2) { border-top: 1px solid var(--line); }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 footer {
   text-align: center;
-  padding: 30px 20px 50px;
-  color: var(--muted);
-  font-size: 0.85rem;
+  padding: var(--sp-7) 20px calc(var(--sp-7) + env(safe-area-inset-bottom, 0px));
+  color: var(--ink-soft);
+}
+
+footer .foot-brand {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+footer .foot-sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
 }
